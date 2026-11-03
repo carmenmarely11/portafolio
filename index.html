@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio | Carmen Alvarado</title>
+  
+  <!-- Tipografía Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Hoja de Estilos -->
+  <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO SUPERIOR -->
+  <header>
+    <div class="star-container">
+      <button class="star-btn" id="star-trigger" aria-label="Abrir menú de navegación">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      </button>
+      
+      <div class="click-here-hint" id="click-here-hint">
+        <svg viewBox="0 0 50 35" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 42 25 C 30 25, 18 18, 10 10" />
+          <path d="M 17 8 L 10 10 L 12 17" />
+        </svg>
+        <span>Click here</span>
+      </div>
+    </div>
+
+    <div class="header-controls">
+      <div class="lang-selector">
+        <button class="lang-btn active" onclick="setLanguage('es', this)">ESPAÑOL</button> /
+        <button class="lang-btn" onclick="setLanguage('in', this)">INGLÉS</button> /
+        <button class="lang-btn" onclick="setLanguage('al', this)">ALEMÁN</button>
+      </div>
+
+      <!-- Switch minimalista sin emojis -->
+      <label class="theme-switch" aria-label="Cambiar modo claro y oscuro">
+        <input type="checkbox" id="theme-toggle-checkbox">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </header>
+
+  <!-- PANTALLA INICIAL COMPLETA -->
+  <div class="first-screen" id="inicio">
+    <main class="main-container">
+      <div class="bg-shape shape-hero-1"></div>
+      <div class="bg-shape shape-hero-2"></div>
+
+      <section class="hero-card reveal fade-up">
+        <div class="decor-bars">
+          <div class="decor-bar"></div>
+          <div class="decor-dot"></div>
+          <div class="decor-bar"></div>
+        </div>
+        <div class="hero-content">
+          <h1 class="hero-title" id="hero-title-text">Portafolio</h1>
+          <p class="hero-subtitle" id="hero-subtitle-text">Diseñador de UX</p>
+          <div class="hero-actions">
+            <a href="#contacto" class="contact-btn" id="hero-contact-btn">Contactame</a>
+            <a href="documentos/cv.pdf" target="_blank" download class="cv-btn" id="hero-cv-btn">Descargar CV &darr;</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="marquee-container">
+      <div class="marquee-track">
+        <div class="marquee-item"><span class="marquee-text">DESLIZA PARA CONOCER MAS ACERCA DE MI</span> ★</div>
+        <div class="marquee-item"><span class="marquee-text">DESLIZA PARA CONOCER MAS ACERCA DE MI</span> ★</div>
+        <div class="marquee-item"><span class="marquee-text">DESLIZA PARA CONOCER MAS ACERCA DE MI</span> ★</div>
+        <div class="marquee-item"><span class="marquee-text">DESLIZA PARA CONOCER MAS ACERCA DE MI</span> ★</div>
+        <div class="marquee-item"><span class="marquee-text">DESLIZA PARA CONOCER MAS ACERCA DE MI</span> ★</div>
+        <div class="marquee-item"><span class="marquee-text">DESLIZA PARA CONOCER MAS ACERCA DE MI</span> ★</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN SOBRE MÍ -->
+  <div class="about-container" id="sobre-mi">
+    <div class="bg-shape shape-about-1"></div>
+    <div class="bg-shape shape-about-2"></div>
+    <div class="ambient-star star-1">★</div>
+    <div class="ambient-star star-2">✦</div>
+
+    <section class="about-card reveal scale-up" id="about-card">
+      
+      <button class="tab-btn" id="vision-toggle-btn">
+        <span id="tab-btn-text">Conocer más</span>
+      </button>
+
+      <div class="vision-panel" id="vision-panel">
+        <h3 class="vision-title" id="vision-title-text">Mi visión</h3>
+        <p class="vision-description" id="vision-desc-text">
+          Me interesa explorar cómo la inteligencia artificial y el análisis de datos pueden transformar la manera en que las personas interactúan con la tecnología y las marcas.<br><br>
+          Actualmente estoy ampliando mis conocimientos en estas áreas, especialmente en análisis de datos y bases de datos, con el objetivo de integrar estas herramientas en la creación de experiencias digitales más inteligentes, útiles y personalizadas.
+        </p>
+      </div>
+
+      <!-- FOTO DE PERFIL RESPONSIVA CON ETICUETA PICTURE -->
+      <div class="photo-box reveal fade-right">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="imagenes/carmen-desktop.png">
+          <source media="(min-width: 768px)" srcset="imagenes/carmen-tablet.jpg">
+          <img src="imagenes/carmen-mobile.png" alt="Foto Carmen Alvarado Reyes" class="profile-img" onerror="this.src='imagenes/carmen.png'; this.onerror=null;">
+        </picture>
+        <div class="photo-placeholder"></div>
+      </div>
+
+      <div class="about-content reveal fade-left">
+        <h2 class="about-title" id="about-title-text">Conoce a Carmen</h2>
+        <p class="about-bio" id="about-bio-text">
+          Mi nombre es Carmen Alvarado Reyes y soy estudiante de Ingeniería en Tecnologías de la Información e Innovación Digital. Me interesa la tecnología desde una perspectiva creativa, especialmente el diseño y desarrollo de interfaces, la experiencia de usuario y la creación de productos digitales.<br><br>
+          Disfruto transformar ideas en soluciones visuales y funcionales, combinando diseño, estructura y tecnología. También tengo interés en la fotografía, la identidad de marca y el marketing digital.
+        </p>
+      </div>
+
+      <div class="about-footer-link">
+        <a href="#contacto" id="contact-link-text">
+          <span class="bold-text">Contactate</span> <span class="light-text">conmigo</span>
+        </a>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- SECCIÓN HABILIDADES -->
+  <div class="skills-container" id="habilidades">
+    <div class="bg-shape shape-skills-1"></div>
+    <div class="bg-shape shape-skills-2"></div>
+    <div class="ambient-star star-skills-1">★</div>
+
+    <h2 class="skills-main-title reveal fade-up" id="skills-title-text">Habilidades</h2>
+
+    <div class="skills-master-card reveal scale-up">
+      <div class="card-left-tab">
+        <div class="tab-inner-bar"></div>
+      </div>
+
+      <div class="accordion-list">
+        
+        <div class="accordion-item active">
+          <button class="accordion-header" type="button" aria-expanded="true">
+            <span class="header-title">
+              <span class="star-white">★</span> <span id="soft-skills-title">Habilidades blandas</span>
+            </span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-content">
+            <p class="skills-card-text" id="soft-skills-desc">
+              Me caracterizo por ser una profesional adaptable, empática y con sólida gestión del tiempo (Time Management), lo que me permite organizar flujos de trabajo eficientes y cumplir metas bajo presión. Destaco por mi comunicación asertiva, pensamiento crítico y capacidad de aprendizaje continuo para colaborar de forma armónica en proyectos multidisciplinarios.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-divider"></div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" type="button" aria-expanded="false">
+            <span class="header-title">
+              <span class="star-white">★</span> <span id="tech-skills-title">Habilidades técnicas</span>
+            </span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-content">
+            <p class="skills-card-text" id="tech-skills-desc">
+              Dominio en diseño UI/UX con Figma, desarrollo web/móvil y programación con arquitectura POO (Java y Lenguaje C). Cuento con formación acreditada en redes (Cisco CCNA: Introducción, Switching, Routing y Wireless), gestión de bases de datos relacionales, prototipado electrónico con Arduino y certificación de idioma inglés TOEFL ITP.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-divider"></div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" type="button" aria-expanded="false">
+            <span class="header-title">
+              <span class="star-white">★</span> <span id="tools-title">Herramientas & Tecnologías</span>
+            </span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-content">
+            <div class="tools-pills">
+              <span class="tool-pill">Java & POO</span>
+              <span class="tool-pill">Figma UI/UX</span>
+              <span class="tool-pill">HTML5 & CSS3</span>
+              <span class="tool-pill">JavaScript</span>
+              <span class="tool-pill">MySQL / Bases de Datos</span>
+              <span class="tool-pill">Lenguaje C</span>
+              <span class="tool-pill">Desarrollo Móvil</span>
+              <span class="tool-pill">Cisco CCNA</span>
+              <span class="tool-pill">Arduino / Hardware</span>
+              <span class="tool-pill">Inglés TOEFL ITP</span>
+              <span class="tool-pill">Gestión del Tiempo</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN PROYECTOS -->
+  <div class="projects-container" id="proyectos">
+    <div class="bg-shape shape-projects-1"></div>
+    <div class="ambient-star star-projects-1">✦</div>
+
+    <h2 class="projects-main-title reveal fade-up" id="projects-title-text">Proyectos</h2>
+
+    <div class="folder-wrapper reveal scale-up">
+      <div class="folder-tabs">
+        <button class="folder-tab tab-laundry active" data-project="laundry">
+          <span>SU LAUNDRY</span>
+        </button>
+        <button class="folder-tab tab-encuadre" data-project="encuadre">
+          <span>ENCUADRE</span>
+        </button>
+        <button class="folder-tab tab-arch" data-project="arch">
+          <span>ARch</span>
+        </button>
+      </div>
+
+      <div class="folder-card project-theme-laundry" id="folder-card">
+        
+        <!-- Proyecto 1: SU LAUNDRY -->
+        <div class="project-item active" id="project-laundry">
+          <div class="project-info">
+            <h3 class="project-name">SU LAUNDRY</h3>
+            <p class="project-desc" id="laundry-desc">
+              Es un sistema de gestión para lavanderías que permita optimizar y centralizar los procesos administrativos y operativos, facilitando el control de pedidos, clientes, inventario, maquinaria y recursos.
+            </p>
+            <a href="https://github.com/carmenmarely11/sistemalundry1.git" target="_blank" class="repo-link" id="laundry-repo-text">Ver repositorio &rsaquo;</a>
+          </div>
+          <div class="project-image-box">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="imagenes/su-laundry-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="imagenes/su-laundry-tablet.jpg">
+              <img src="imagenes/su-laundry-mobile.jpg" alt="SU LAUNDRY" class="project-img" onerror="this.style.display='none'">
+            </picture>
+          </div>
+        </div>
+
+        <!-- Proyecto 2: ENCUADRE -->
+        <div class="project-item" id="project-encuadre">
+          <div class="project-info">
+            <h3 class="project-name">ENCUADRE</h3>
+            <p class="project-desc" id="encuadre-desc">
+              Proyecto de diseño y desarrollo web para un colectivo de fotografía y producción audiovisual. Busca crear una presencia digital que refleje su identidad visual, destaque su trabajo y facilite a los visitantes explorar sus proyectos y servicios mediante una experiencia intuitiva y atractiva.
+            </p>
+            <a href="https://github.com/carmenmarely11/encuadre-collective.git" target="_blank" class="repo-link" id="encuadre-repo-text">Ver repositorio &rsaquo;</a>
+            <a href="https://friendly-entremet-993188.netlify.app" target="_blank" class="repo-link demo-link" id="encuadre-demo-text">Ver sitio web &nearr;</a>
+          </div>
+          <div class="project-image-box">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="imagenes/encuadre-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="imagenes/encuadre-tablet.jpg">
+              <img src="imagenes/encuadre-mobile.jpg" alt="ENCUADRE" class="project-img" onerror="this.style.display='none'">
+            </picture>
+          </div>
+        </div>
+
+        <!-- Proyecto 3: ARch -->
+        <div class="project-item" id="project-arch">
+          <div class="project-info">
+            <h3 class="project-name">ARch</h3>
+            <p class="project-desc" id="arch-desc">
+              Concepto de marca de calzado femenino especializado en tacones y botas. El proyecto se enfoca en desarrollar una identidad visual moderna y minimalista, acompañada de una propuesta digital de ecommerce que permita presentar los productos y ofrecer una experiencia de compra sencilla, visual y coherente con la personalidad de la marca.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/carmenmarely11/ARch.git" target="_blank" class="repo-link" id="arch-repo-text">Ver repositorio &rsaquo;</a>
+              <a href="https://shoesarch.netlify.app" target="_blank" class="repo-link demo-link" id="arch-demo-text">Ver sitio web &nearr;</a>
+            </div>
+          </div>
+          <div class="project-image-box">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="imagenes/arch-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="imagenes/arch-tablet.jpg">
+              <img src="imagenes/arch-mobile.jpg" alt="ARch" class="project-img" onerror="this.style.display='none'">
+            </picture>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN CERTIFICADOS -->
+  <div class="certificates-container" id="certificaciones">
+    <div class="bg-shape shape-cert-1"></div>
+    <div class="ambient-star star-cert-1">★</div>
+
+    <h2 class="certificates-main-title reveal fade-up" id="cert-title-text">Certificados</h2>
+
+    <div class="carousel-wrapper reveal scale-up">
+      <button class="carousel-nav-btn prev-btn" id="cert-prev-btn" aria-label="Anterior certificado">&#10094;</button>
+
+      <div class="carousel-track-container" id="carousel-track-container">
+        <div class="carousel-track" id="carousel-track">
+          
+          <a href="documentos/cerificado_masterai.pdf" target="_blank" class="certificate-card" title="Ver PDF Master AI with Gemini">
+            <div class="certificate-frame">
+              <div class="cert-placeholder">
+                <span class="cert-icon">🤖</span>
+                <strong>Santander Open Academy</strong>
+                <span>Master AI with Gemini</span>
+                <span class="click-pdf-hint">Clic para abrir PDF &nearr;</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="documentos/domploma_figma.pdf" target="_blank" class="certificate-card" title="Ver Diploma Figma">
+            <div class="certificate-frame">
+              <div class="cert-placeholder">
+                <span class="cert-icon">🎨</span>
+                <strong>Diseño UI/UX</strong>
+                <span>Diploma Figma</span>
+                <span class="click-pdf-hint">Clic para abrir PDF &nearr;</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="documentos/certificado_ccna_switching_routing_and_wireless_essentials.pdf" target="_blank" class="certificate-card" title="Ver CCNA Switching, Routing & Wireless">
+            <div class="certificate-frame">
+              <div class="cert-placeholder">
+                <span class="cert-icon">📡</span>
+                <strong>Cisco Networking Academy</strong>
+                <span>CCNA: Switching, Routing & Wireless</span>
+                <span class="click-pdf-hint">Clic para abrir PDF &nearr;</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="documentos/certificado_ccna-_introduction_to_networks_.pdf" target="_blank" class="certificate-card" title="Ver CCNA Introduction to Networks">
+            <div class="certificate-frame">
+              <div class="cert-placeholder">
+                <span class="cert-icon">🌐</span>
+                <strong>Cisco Networking Academy</strong>
+                <span>CCNA: Introduction to Networks</span>
+                <span class="click-pdf-hint">Clic para abrir PDF &nearr;</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="documentos/certificado-basededatos.pdf" target="_blank" class="certificate-card" title="Ver Certificado Bases de Datos">
+            <div class="certificate-frame">
+              <div class="cert-placeholder">
+                <span class="cert-icon">🗄️</span>
+                <strong>Bases de Datos</strong>
+                <span>Fundamentos y Gestión DB</span>
+                <span class="click-pdf-hint">Clic para abrir PDF &nearr;</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="documentos/certificado_app_movil.pdf" target="_blank" class="certificate-card" title="Ver Certificado Apps Móviles">
+            <div class="certificate-frame">
+              <div class="cert-placeholder">
+                <span class="cert-icon">📱</span>
+                <strong>Desarrollo Mobile</strong>
+                <span>Aplicaciones Móviles</span>
+                <span class="click-pdf-hint">Clic para abrir PDF &nearr;</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="documentos/certificado_c_essentials_1_certificate_.pdf" target="_blank" class="certificate-card" title="Ver Certificado C Essentials 1">
+            <div class="certificate-frame">
+              <div class="cert-placeholder">
+                <span class="cert-icon">💻</span>
+                <strong>Cisco / C Institute</strong>
+                <span>C Essentials 1</span>
+                <span class="click-pdf-hint">Clic para abrir PDF &nearr;</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="documentos/certificado_paradigma_poo.pdf" target="_blank" class="certificate-card" title="Ver Certificado Programación Orientada a Objetos">
+            <div class="certificate-frame">
+              <div class="cert-placeholder">
+                <span class="cert-icon">🧩</span>
+                <strong>Programación</strong>
+                <span>Paradigma POO</span>
+                <span class="click-pdf-hint">Clic para abrir PDF &nearr;</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="documentos/certificado_arduino.pdf" target="_blank" class="certificate-card" title="Ver Certificado Arduino">
+            <div class="certificate-frame">
+              <div class="cert-placeholder">
+                <span class="cert-icon">⚡</span>
+                <strong>Electrónica & IoT</strong>
+                <span>Arduino & Prototipado</span>
+                <span class="click-pdf-hint">Clic para abrir PDF &nearr;</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="documentos/certificado_toefl_itp.pdf" target="_blank" class="certificate-card" title="Ver Certificación TOEFL ITP">
+            <div class="certificate-frame">
+              <div class="cert-placeholder">
+                <span class="cert-icon">🇬🇧</span>
+                <strong>Idioma Inglés</strong>
+                <span>Certificación TOEFL ITP</span>
+                <span class="click-pdf-hint">Clic para abrir PDF &nearr;</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="documentos/certificado_timemanagement.pdf" target="_blank" class="certificate-card" title="Ver Certificado Time Management">
+            <div class="certificate-frame">
+              <div class="cert-placeholder">
+                <span class="cert-icon">⏰</span>
+                <strong>Habilidades Profesionales</strong>
+                <span>Time Management</span>
+                <span class="click-pdf-hint">Clic para abrir PDF &nearr;</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="documentos/certificado_icatsin.pdf" target="_blank" class="certificate-card" title="Ver Certificado ICATSIN">
+            <div class="certificate-frame">
+              <div class="cert-placeholder">
+                <span class="cert-icon">🏛️</span>
+                <strong>Capacitación Técnica</strong>
+                <span>Certificación ICATSIN</span>
+                <span class="click-pdf-hint">Clic para abrir PDF &nearr;</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="documentos/certificado_finder.pdf" target="_blank" class="certificate-card" title="Ver Certificado Finder">
+            <div class="certificate-frame">
+              <div class="cert-placeholder">
+                <span class="cert-icon">🔍</span>
+                <strong>Investigación Digital</strong>
+                <span>Certificado Finder</span>
+                <span class="click-pdf-hint">Clic para abrir PDF &nearr;</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <button class="carousel-nav-btn next-btn" id="cert-next-btn" aria-label="Siguiente certificado">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- SECCIÓN CONTACTO / FOOTER (SIN TELÉFONO Y CON BOTÓN CV) -->
+  <footer class="contact-footer" id="contacto">
+    <div class="footer-container reveal fade-up">
+      <div class="footer-top">
+        <div class="footer-heading">
+          <span class="footer-label" id="footer-contact-label">• Contacto</span>
+          <h2 class="footer-title glow-text" id="footer-hablemos-text">HABLEMOS</h2>
+        </div>
+
+        <div class="footer-socials">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/carmen-alvarado-reyes-414a5b410" target="_blank" class="social-box" aria-label="Perfil de LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.72a1.47 1.47 0 0 0-1.48 1.47c0 .81.66 1.47 1.48 1.47s1.47-.66 1.47-1.47c0-.81-.66-1.47-1.47-1.47z"/>
+            </svg>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/carmenmarely11" target="_blank" class="social-box" aria-label="Perfil de GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom-row">
+        <div>
+          <span class="footer-label" id="footer-email-label">• Correo</span><br>
+          <a href="mailto:carmenmarely11@gmail.com" class="footer-email glow-text" id="footer-email-address">carmenmarely11@gmail.com</a>
+        </div>
+        <div>
+          <a href="documentos/cv.pdf" target="_blank" download class="footer-cv-btn" id="footer-cv-download">Descargar CV (PDF) &darr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- OVERLAY MENÚ ÍNDICE (CON MAYÚSCULAS AL INICIO) -->
+  <div class="nav-overlay" id="nav-overlay">
+    <button class="close-btn" id="close-nav">&times;</button>
+    <ul class="nav-menu">
+      <li><a href="#sobre-mi" id="menu-sobre-mi">Sobre mí</a></li>
+      <li><a href="#habilidades" id="menu-habilidades">Habilidades</a></li>
+      <li><a href="#proyectos" id="menu-proyectos">Proyectos</a></li>
+      <li><a href="#certificaciones" id="menu-certificaciones">Certificaciones</a></li>
+      <li><a href="#contacto" id="menu-contacto">Contacto</a></li>
+    </ul>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // 1. Menú Overlay Estrella
+      const starTrigger = document.getElementById('star-trigger');
+      const navOverlay = document.getElementById('nav-overlay');
+      const closeNav = document.getElementById('close-nav');
+
+      if (starTrigger && navOverlay) {
+        starTrigger.addEventListener('click', () => navOverlay.classList.add('active'));
+      }
+      if (closeNav && navOverlay) {
+        closeNav.addEventListener('click', () => navOverlay.classList.remove('active'));
+      }
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (navOverlay) navOverlay.classList.remove('active');
+        });
+      });
+
+      // 2. Ocultar "Click here" al deslizar
+      const clickHereHint = document.getElementById('click-here-hint');
+      let scrollTimeout;
+
+      window.addEventListener('scroll', () => {
+        if (clickHereHint) {
+          clickHereHint.classList.add('hidden-on-scroll');
+          clearTimeout(scrollTimeout);
+          scrollTimeout = setTimeout(() => {
+            clickHereHint.classList.remove('hidden-on-scroll');
+          }, 250);
+        }
+      });
+
+      // 3. Animaciones al hacer Scroll
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('active');
+        });
+      }, { threshold: 0.12 });
+      revealElements.forEach(el => revealObserver.observe(el));
+
+      // 4. Deslizar pestaña "Mi visión"
+      const visionBtn = document.getElementById('vision-toggle-btn');
+      const aboutCard = document.getElementById('about-card');
+      if (visionBtn && aboutCard) {
+        visionBtn.addEventListener('click', () => aboutCard.classList.toggle('vision-active'));
+      }
+
+      // 5. Acordeón Interactivo Habilidades
+      const accordionHeaders = document.querySelectorAll('.accordion-header');
+      accordionHeaders.forEach(header => {
+        header.addEventListener('click', (e) => {
+          e.preventDefault();
+          const item = header.closest('.accordion-item');
+          if (item) {
+            const isActive = item.classList.contains('active');
+            item.classList.toggle('active');
+            header.setAttribute('aria-expanded', !isActive);
+          }
+        });
+      });
+
+      // 6. Pestañas de Proyectos
+      const folderTabs = document.querySelectorAll('.folder-tab');
+      const projectItems = document.querySelectorAll('.project-item');
+      const folderCard = document.getElementById('folder-card');
+
+      folderTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const project = tab.getAttribute('data-project');
+          folderTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+
+          if (folderCard) {
+            folderCard.className = `folder-card project-theme-${project}`;
+          }
+
+          projectItems.forEach(item => item.classList.remove('active'));
+          const targetProject = document.getElementById(`project-${project}`);
+          if (targetProject) targetProject.classList.add('active');
+        });
+      });
+
+      // 7. Carrusel de Certificados
+      const carouselTrack = document.getElementById('carousel-track-container');
+      const prevBtn = document.getElementById('cert-prev-btn');
+      const nextBtn = document.getElementById('cert-next-btn');
+
+      if (carouselTrack && prevBtn && nextBtn) {
+        const scrollAmount = 360;
+        nextBtn.addEventListener('click', () => {
+          carouselTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+        prevBtn.addEventListener('click', () => {
+          carouselTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+      }
+
+      // 8. Modo Claro / Oscuro
+      const themeCheckbox = document.getElementById('theme-toggle-checkbox');
+      if (themeCheckbox) {
+        themeCheckbox.addEventListener('change', () => {
+          if (themeCheckbox.checked) {
+            document.body.setAttribute('data-theme', 'dark');
+          } else {
+            document.body.removeAttribute('data-theme');
+          }
+        });
+      }
+
+    });
+
+    // 9. Traducciones Dinámicas (ES, IN, AL)
+    const translations = {
+      es: {
+        heroTitle: "Portafolio",
+        heroSubtitle: "Diseñador de UX",
+        heroContact: "Contactame",
+        heroCv: "Descargar CV ↓",
+        marquee: "DESLIZA PARA CONOCER MAS ACERCA DE MI",
+        aboutTitle: "Conoce a Carmen",
+        aboutBio: "Mi nombre es Carmen Alvarado Reyes y soy estudiante de Ingeniería en Tecnologías de la Información e Innovación Digital. Me interesa la tecnología desde una perspectiva creativa, especialmente el diseño y desarrollo de interfaces, la experiencia de usuario y la creación de productos digitales.<br><br>Disfruto transformar ideas en soluciones visuales y funcionales, combinando diseño, estructura y tecnología. También tengo interés en la fotografía, la identidad de marca y el marketing digital.",
+        visionTitle: "Mi visión",
+        visionDesc: "Me interesa explorar cómo la inteligencia artificial y el análisis de datos pueden transformar la manera en que las personas interactúan con la tecnología y las marcas.<br><br>Actualmente estoy ampliando mis conocimientos en estas áreas, especialmente en análisis de datos y bases de datos, con el objetivo de integrar estas herramientas en la creación de experiencias digitales más inteligentes, útiles y personalizadas.",
+        contactLink: '<span class="bold-text">Contactate</span> <span class="light-text">conmigo</span>',
+        skillsTitle: "Habilidades",
+        softSkillsTitle: "Habilidades blandas",
+        softSkillsDesc: "Me caracterizo por ser un profesional adaptable, empático y con una sólida comunicación asertiva, lo que me permite integrarme con facilidad en equipos diversos y resolver situaciones complejas de manera constructiva. Cuento con una alta capacidad de escucha activa, resiliencia y pensamiento crítico para mantener un desempeño positivo bajo presión, facilitando la colaboración armónica y orientando siempre los esfuerzos colectivos hacia el logro de objetivos compartidos.",
+        techSkillsTitle: "Habilidades técnicas",
+        techSkillsDesc: "Dominio en diseño UI/UX con Figma, desarrollo web/móvil y programación con arquitectura POO (Java y Lenguaje C). Cuento con formación acreditada en redes Cisco CCNA, bases de datos relacionales, Arduino e inglés TOEFL ITP.",
+        toolsTitle: "Herramientas & Tecnologías",
+        projectsTitle: "Proyectos",
+        laundryDesc: "Es un sistema de gestión para lavanderías que permita optimizar y centralizar los procesos administrativos y operativos, facilitando el control de pedidos, clientes, inventario, maquinaria y recursos.",
+        encuadreDesc: "Proyecto de diseño y desarrollo web para un colectivo de fotografía y producción audiovisual. Busca crear una presencia digital que refleje su identidad visual, destaque su trabajo y facilite a los visitantes explorar sus proyectos y servicios mediante una experiencia intuitiva y atractiva.",
+        archDesc: "Concepto de marca de calzado femenino especializado en tacones y botas. El proyecto se enfoca en desarrollar una identidad visual moderna y minimalista, acompañada de una propuesta digital de ecommerce que permita presentar los productos y ofrecer una experiencia de compra sencilla, visual y coherente con la personalidad de la marca.",
+        repoText: "Ver repositorio &rsaquo;",
+        certTitle: "Certificados",
+        footerContactLabel: "• Contacto",
+        footerHablemos: "HABLEMOS",
+        footerEmailLabel: "• Correo",
+        footerCvBtn: "Descargar CV (PDF) ↓",
+        menu: ["Sobre mí", "Habilidades", "Proyectos", "Certificaciones", "Contacto"]
+      },
+      in: {
+        heroTitle: "Portfolio",
+        heroSubtitle: "UX Designer",
+        heroContact: "Contact me",
+        heroCv: "Download CV ↓",
+        marquee: "SCROLL TO LEARN MORE ABOUT ME",
+        aboutTitle: "Meet Carmen",
+        aboutBio: "My name is Carmen Alvarado Reyes, and I'm a student of Information Technology Engineering and Digital Innovation. I'm interested in technology from a creative perspective, especially interface design and development, user experience, and the creation of digital products.<br><br>I enjoy transforming ideas into visual and functional solutions, combining design, structure, and technology. I'm also interested in photography, brand identity, and digital marketing.",
+        visionTitle: "My vision",
+        visionDesc: "I'm interested in exploring how artificial intelligence and data analytics can transform the way people interact with technology and brands.<br><br>I'm currently expanding my knowledge in these areas, especially in data analytics and databases, with the goal of integrating these tools into the creation of smarter, more useful, and personalized digital experiences.",
+        tabBtn: "Learn more",
+        contactLink: '<span class="bold-text">Get in touch</span> <span class="light-text">with me</span>',
+        skillsTitle: "Skills",
+        softSkillsTitle: "Soft skills",
+        softSkillsDesc: "I am an adaptable and empathetic professional with strong assertive communication skills, which allows me to easily integrate into diverse teams and resolve complex situations constructively. I possess excellent active listening skills, resilience, and critical thinking abilities, enabling me to maintain positive performance under pressure, facilitate harmonious collaboration, and always guide collective efforts toward achieving shared goals.",
+        techSkillsTitle: "Technical skills",
+        techSkillsDesc: "Proficient in UI/UX design with Figma, web/mobile development, OOP (Java & C), Cisco CCNA networking, Databases, Arduino, and TOEFL ITP English.",
+        toolsTitle: "Tools & Technologies",
+        projectsTitle: "Projects",
+        laundryDesc: "It is a management system for laundries that allows you to optimize and centralize administrative and operational processes, facilitating the control of orders, customers, inventory, machinery and resources.",
+        encuadreDesc: "Web design and development project for a photography and audiovisual production collective. The goal is to create a digital presence that reflects their visual identity, showcases their work, and allows visitors to easily explore their projects and services through an intuitive and engaging experience.",
+        archDesc: "A women's footwear brand concept specializing in heels and boots. The project focuses on developing a modern and minimalist visual identity, accompanied by an e-commerce platform that showcases the products and offers a simple, visual, and consistent shopping experience that aligns with the brand's personality.",
+        repoText: "View repository &rsaquo;",
+        certTitle: "Certificates",
+        footerContactLabel: "• Contact",
+        footerHablemos: "LET'S TALK",
+        footerEmailLabel: "• Email",
+        footerCvBtn: "Download CV (PDF) ↓",
+        menu: ["About me", "Skills", "Projects", "Certifications", "Contact"]
+      },
+      al: {
+        heroTitle: "Portfolio",
+        heroSubtitle: "UX-Designer",
+        heroContact: "Kontaktiere mich",
+        heroCv: "Lebenslauf herunterladen ↓",
+        marquee: "SCROLLE, UM MEHR ÜBER MICH ZU ERFAHREN",
+        aboutTitle: "Lerne Carmen kennen",
+        aboutBio: "Mein Name ist Carmen Alvarado Reyes, und ich studiere Informationstechnologie und Digitale Innovation. Ich interessiere mich für Technologie aus kreativer Sicht, insbesondere für Interface-Design und -Entwicklung, User Experience und die Erstellung digitaler Produkte.<br><br>Mir macht es Spaß, Ideen in visuelle und funktionale Lösungen umzusetzen und dabei Design, Struktur und Technologie zu verbinden. Außerdem interessiere ich mich für Fotografie, Markenidentität und digitales Marketing.",
+        visionTitle: "Meine Vision",
+        visionDesc: "Ich möchte erforschen, wie künstliche Intelligenz und Datenanalyse die Interaktion von Menschen mit Technologie und Marken verändern können.<br><br>Aktuell erweitere ich mein Wissen in diesen Bereichen, insbesondere in Datenanalyse und Datenbanken, mit dem Ziel, diese Werkzeuge in die Entwicklung intelligenterer, nützlicherer und personalisierter digitaler Erlebnisse zu integrieren.",
+        tabBtn: "Mehr erfahren",
+        contactLink: '<span class="bold-text">Nimm Kontakt</span> <span class="light-text">mit mir auf</span>',
+        skillsTitle: "Fähigkeiten",
+        softSkillsTitle: "Soft Skills",
+        softSkillsDesc: "Ich bin eine anpassungsfähige und empathische Fachkraft mit ausgeprägten Kommunikationsfähigkeiten, die es mir ermöglichen, mich problemlos in diverse Teams zu integrieren und komplexe Situationen konstruktiv zu lösen. Ich verfüge über ausgezeichnete aktive Zuhörfähigkeiten, Belastbarkeit und kritisches Denkvermögen, wodurch ich auch unter Druck konstant gute Leistungen erbringe, eine harmonische Zusammenarbeit fördere und die gemeinsamen Anstrengungen stets auf das Erreichen gemeinsamer Ziele ausrichte.",
+        techSkillsTitle: "Technische Fähigkeiten",
+        techSkillsDesc: "UI/UX-Design con Figma, Web/Mobile-Entwicklung, OOP, Cisco CCNA, Datenbanken, Arduino und TOEFL ITP Englisch.",
+        toolsTitle: "Werkzeuge & Technologien",
+        projectsTitle: "Projekte",
+        laundryDesc: "Es handelt sich um ein Managementsystem für Wäschereien, mit dem sich administrative und operative Prozesse optimieren und zentralisieren lassen und die Kontrolle von Bestellungen, Kunden, Lagerbeständen, Maschinen und Ressourcen erleichtert wird.",
+        encuadreDesc: "Webdesign- und Entwicklungsprojekt für ein Kollektiv aus den Bereichen Fotografie und audiovisuelle Produktion. Ziel ist es, eine digitale Präsenz zu schaffen, die die visuelle Identität des Kollektivs widerspiegelt, seine Arbeiten präsentiert und Besuchern eine intuitive und ansprechende Möglichkeit bietet, Projekte und Dienstleistungen zu entdecken.",
+        archDesc: "A women's footwear brand concept specializing in heels and boots. The project focuses on developing a modern and minimalist visual identity, accompanied by an e-commerce platform that showcases the products and offers a simple, visual, and consistent shopping experience that aligns with the brand's personality.",
+        repoText: "Repository ansehen &rsaquo;",
+        certTitle: "Zertifikate",
+        footerContactLabel: "• Kontakt",
+        footerHablemos: "LASS UNS SPRECHEN",
+        footerEmailLabel: "• E-Mail",
+        footerCvBtn: "Lebenslauf herunterladen (PDF) ↓",
+        menu: ["Über mich", "Fähigkeiten", "Projekte", "Zertifizierungen", "Kontakt"]
+      }
+    };
+
+    function setLanguage(lang, element) {
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      if (element) element.classList.add('active');
+
+      const data = translations[lang];
+      document.getElementById('hero-title-text').textContent = data.heroTitle;
+      document.getElementById('hero-subtitle-text').textContent = data.heroSubtitle;
+      document.getElementById('hero-contact-btn').textContent = data.heroContact;
+      document.getElementById('hero-cv-btn').textContent = data.heroCv;
+
+      document.querySelectorAll('.marquee-text').forEach(el => el.textContent = data.marquee);
+
+      document.getElementById('about-title-text').textContent = data.aboutTitle;
+      document.getElementById('about-bio-text').innerHTML = data.aboutBio;
+      document.getElementById('vision-title-text').textContent = data.visionTitle;
+      document.getElementById('vision-desc-text').innerHTML = data.visionDesc;
+      document.getElementById('tab-btn-text').textContent = data.tabBtn;
+      document.getElementById('contact-link-text').innerHTML = data.contactLink;
+
+      document.getElementById('skills-title-text').textContent = data.skillsTitle;
+      document.getElementById('soft-skills-title').textContent = data.softSkillsTitle;
+      document.getElementById('soft-skills-desc').textContent = data.softSkillsDesc;
+      document.getElementById('tech-skills-title').textContent = data.techSkillsTitle;
+      document.getElementById('tech-skills-desc').textContent = data.techSkillsDesc;
+      document.getElementById('tools-title').textContent = data.toolsTitle;
+
+      document.getElementById('projects-title-text').textContent = data.projectsTitle;
+      document.getElementById('laundry-desc').textContent = data.laundryDesc;
+      document.getElementById('encuadre-desc').textContent = data.encuadreDesc;
+      document.getElementById('arch-desc').textContent = data.archDesc;
+
+      ['laundry-repo-text', 'encuadre-repo-text', 'arch-repo-text'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = data.repoText;
+      });
+
+      document.getElementById('cert-title-text').textContent = data.certTitle;
+
+      document.getElementById('footer-contact-label').textContent = data.footerContactLabel;
+      document.getElementById('footer-hablemos-text').textContent = data.footerHablemos;
+      document.getElementById('footer-email-label').textContent = data.footerEmailLabel;
+      document.getElementById('footer-cv-download').textContent = data.footerCvBtn;
+
+      const menuIds = ['menu-sobre-mi', 'menu-habilidades', 'menu-proyectos', 'menu-certificaciones', 'menu-contacto'];
+      menuIds.forEach((id, index) => {
+        const el = document.getElementById(id);
+        if (el && data.menu[index]) el.textContent = data.menu[index];
+      });
+    }
+  </script>
+</body>
+</html>
